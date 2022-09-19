@@ -12,16 +12,13 @@
   --web-font-h2: 1.7rem;
   --web-font-h1: 2rem;
 
-  --web-gris: #DADAD9;
-  --web-gris-back: #F2F2F2;
+  --web-gris: #f0f0f0;
   --web-black: #000000;
   --web-white: #FFFFFF;
-
-  --web-blue: #005B84;
-  --web-green: #7BC044;
-  --web-gris-template: #494849;
-  --web-purple: #55164f;
-  --web-orange: #f37837;
+  --web-blue: #3c55ff;
+  
+  --web-select-text: #3c55ff;
+  --web-select-bg: #55164f;
 
   --font-titles: "IntegralCF";
   --font-defautl: "Satoshi";
@@ -61,8 +58,8 @@ $breakpoints: (
 
 // [Refactor]
 ::selection {
-  background: var(--web-purple);
-  color: var(--web-green);
+  background: var(--web-select-bg);
+  color: var(--web-select-text);
 }
 // [Tools]
 .zoom{
@@ -80,7 +77,7 @@ body{
 
 h1{
   font-family: 'IntegralCF';
-  color: blue;
+  color: var(--web-blue);
   background-image: url('../assets/img/logo.png');
 }
 h2{
