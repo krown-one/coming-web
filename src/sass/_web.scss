@@ -2,6 +2,10 @@
   --web-font-base: 1rem;
   --web-font-min: 0.8rem;
 
+  --web-font-p: 1.9rem;
+  --web-font-p-s: 1.5rem;
+  --web-font-theme: 1.5rem;
+
   --web-font-14: 1.1rem;
   --web-font-18: 1.3rem;
   --web-font-24: 1.5rem;
@@ -28,6 +32,8 @@
 // [Padding]
 $paddingWebSm: 1.5rem;
 $paddingWebMd: 2rem;
+// [animation]
+$timeAnimation: .4s;
 
 $breakpoints: (
   sm: default,
@@ -40,7 +46,9 @@ $breakpoints: (
     @content;
   }
 }
-
+*{
+  box-sizing: border-box;
+}
 // [Content]
 .container_web{
   margin: auto;
@@ -73,13 +81,119 @@ $breakpoints: (
 // [WEB]
 body{
   font-family: var(--font-theme);
+  color: var(--web-blue);
+}
+a{
+  color: var(--web-blue);
 }
 
-h1{
-  font-family: 'IntegralCF';
-  color: var(--web-blue);
-  background-image: url('../assets/img/logo.png');
-}
-h2{
-  font-family: 'Satoshi';
+.home{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+
+  .web{
+
+    .logo{
+      display: block;
+      margin: 0 auto;
+      width: 60%;
+      max-width: 23rem;
+    }
+    h1{
+      font-family: var(--font-titles);
+      margin: 1rem 0;
+      font-size: 54px;
+      line-height: 46px;
+      margin-bottom: 2rem;
+
+      transition: font-size $timeAnimation ease;
+
+      @include media-up(md){
+        margin: 1rem 0;
+        font-size: 151px;
+        line-height: 118px;
+        margin-bottom: 3rem;
+      }
+    }
+    p{
+      display: block;
+      padding-left: 1rem;
+      font-size: 24px;
+      margin-bottom: 2rem;
+
+      @include media-up(md){
+        margin-bottom: 6rem;
+        padding-left: 2rem;
+        font-size: 30px;
+      }
+
+      .arrow{
+        display: inline-block;
+        padding: 2px 10px 0 10px;
+      }
+      span{
+        text-align: right;
+        display: block;
+
+        @include media-up(md){
+          text-align: left;
+          display: inline-block;
+        }
+
+        a{
+          text-decoration: none;
+          font-size: 3rem;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+
+  .footer{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    @include media-up(md){
+      flex-direction: row;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .input{
+      flex: 1;
+      
+
+      input{
+        padding: 0 1rem;
+        width: 100%;
+        outline: none;
+        border: 0;
+        background-color: var(--web-gris);
+        height: 40px;
+        border-radius: 10px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+
+        &:focus{
+          outline: none;
+        }
+      }
+    }
+
+    .button{
+      button{
+        border: 0;
+        border-radius: 10px;
+        width: 100%;
+        color: var(--web-white);
+        background-color: var(--web-blue);
+        height: 40px;
+        padding: 0 40px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 1rem;
+      }
+    }
+  }
 }
