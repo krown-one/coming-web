@@ -1,10 +1,11 @@
 import "./sass/main.scss";
-import Photos from './js/Photos'
+// Wow
+import WOW from 'wowjs';
 
-const photos = new Photos();
 
 async function main() {
-  console.log(await photos.getPhotos())
+  window.wow = new WOW.WOW({ live: false });
+  window.wow.init();
 }
 
 main();

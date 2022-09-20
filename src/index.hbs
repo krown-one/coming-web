@@ -13,9 +13,20 @@
       <div class="home">
         {{!-- web --}}
         <div class="web">
-          <img src="assets/img/logo.svg" class="logo"/>
-          <h1>great things take time</h1>
-          <p>
+          {{!-- Animated --}}
+          <img 
+            src="assets/img/logo.svg"
+            class="logo wow animate__animated animate__backInDown"
+          />
+          {{!-- Animated --}}
+          <h1
+            class="wow animate__animated animate__backInLeft"
+            data-wow-delay=".5s"
+          >great things take time</h1>
+          <p
+            class="wow animate__animated animate__backInLeft"
+            data-wow-delay="1s"
+          >
             in the meanwhile you can follow us
             <img src="./assets/img/arrow.svg" width="50px" class="arrow">
             <span>
@@ -34,9 +45,7 @@
         {{!-- footer --}}
         <div class="footer">
           <div class="input">
-            
               <input type="text"/>
-           
           </div>
           <div class="button">
             <button>contact me</button>
