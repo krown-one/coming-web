@@ -30,6 +30,20 @@ module.exports = (env, argv) => {
         use: [
           (isProduction) ? MiniCssExtractPlugin.loader : 'style-loader',
          "css-loader",
+         {
+          loader: "clean-css-loader",
+          options: {
+            // Loader options
+            disable: !isProduction,
+            skipWarn: false,
+
+            // CleasCSS options
+            compatibility: "*",
+            level: 2,
+            inline: ["remote"],
+            //...
+          },
+        },
          "sass-loader",
         ]
       },
