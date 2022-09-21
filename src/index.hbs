@@ -23,33 +23,77 @@
             class="wow animate__animated animate__backInLeft"
             data-wow-delay=".5s"
           >great things take time</h1>
+          {{!-- Animated --}}
           <p
             class="wow animate__animated animate__backInLeft"
             data-wow-delay="1s"
           >
             in the meanwhile you can follow us
-            <img src="./assets/img/arrow.svg" width="50px" class="arrow">
+            {{!-- Animated --}}
+            <img 
+              src="./assets/img/arrow.svg" 
+              width="50px" 
+              class="arrow wow animate__animated animate__zoomInLeft"
+              data-wow-delay="1.5s"
+            >
             <span>
               <a href="https://www.behance.net/krowncreates" target="_follow">
-                <i class="fa-brands fa-square-behance zoom"></i>
+                {{!-- Animated --}}
+                <i 
+                  class="fa-brands fa-square-behance zoom wow animate__animated animate__rotateInDownLeft"
+                  data-wow-delay="2s"
+                ></i>
               </a>
+              {{!-- Animated --}}
               <a href="https://www.instagram.com/krown.creates/" target="_follow">
-                <i class="fa-brands fa-instagram zoom"></i>
+                <i 
+                  class="fa-brands fa-instagram zoom wow animate__animated animate__rotateInDownLeft"
+                  data-wow-delay="2.2s"
+                ></i>
               </a>
+              {{!-- Animated --}}
               <a href="https://github.com/krown-one" target="_follow">
-                <i class="fa-brands fa-github zoom"></i>
+                <i 
+                  class="fa-brands fa-github zoom wow animate__animated animate__rotateInDownLeft"
+                  data-wow-delay="2.3s"
+                ></i>
               </a>
             </span>
           </p>
         </div>
         {{!-- footer --}}
-        <div class="footer">
-          <div class="input">
-              <input type="text"/>
-          </div>
-          <div class="button">
-            <button>contact me</button>
-          </div>
+        <div class="form">
+          <form
+            {{!-- validate --}}
+            onsubmit="return submitContactMe()"
+            {{!-- mailchip --}}
+            action="https://one.us8.list-manage.com/subscribe/post?u=588ee3af8ad876a048e4c519c&amp;id=6fb0a7fd7d&amp;f_id=00af5fe0f0"
+            method="post"
+            id="mc-embedded-subscribe-form"
+            name="mc-embedded-subscribe-form"
+            class="validate"
+            target="_self"
+          >
+            <div 
+              class="footer wow animate__animated animate__bounceInUp"
+              data-wow-delay="2s"
+            >
+              <div class="input">
+                  <input 
+                    type="text"
+                    id="input_contact_me"
+                    {{!-- mailchip --}}
+                    type="email"
+                    value=""
+                    name="EMAIL"
+                  />
+                  <span id="info__contact_me"></span>
+              </div>
+              <div class="button">
+                <button id="button_contact_me">contact me <i class="fa-brands fa-mailchimp"></i></button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
 

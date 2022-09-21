@@ -179,6 +179,14 @@ a{
         &:focus{
           outline: none;
         }
+
+        &.error{
+          border: 1px solid #df2020;
+        }
+      }
+      span{
+        color: #df2020;
+        font-size: 12px;
       }
     }
 
