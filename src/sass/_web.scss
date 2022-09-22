@@ -71,6 +71,7 @@ $breakpoints: (
 }
 // [Tools]
 .zoom{
+  cursor: pointer;
   transition: transform .5s;
 
   &:hover{
